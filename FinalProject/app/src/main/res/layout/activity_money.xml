@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    >
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/MoneyCalendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/CalenderViewCustom"
+        app:mcv_dateTextAppearance="@style/CalenderViewDateCustomText"
+        app:mcv_weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+        app:mcv_selectionMode="single"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/incomeTextView"
+        android:layout_width="85dp"
+        android:layout_height="30dp"
+        android:text="수 입 : "
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/tv_solid_rect"
+        app:layout_constraintTop_toBottomOf="@id/MoneyCalendarView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="250dp"
+        />
+
+    <EditText
+        android:id="@+id/incomeEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/MoneyCalendarView"
+        app:layout_constraintStart_toStartOf="@id/incomeTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:id="@+id/costTextView"
+        android:layout_width="85dp"
+        android:layout_height="30dp"
+        android:text="지 출 : "
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/tv_solid_rect"
+        app:layout_constraintTop_toBottomOf="@id/incomeTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="250dp"
+        />
+
+    <EditText
+        android:id="@+id/costEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/incomeEditText"
+        app:layout_constraintStart_toStartOf="@id/costTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:id="@+id/won1"
+        android:text="원"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:inputType=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/incomeEditText"
+        app:layout_constraintTop_toBottomOf="@id/MoneyCalendarView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="150dp"
+        />
+
+    <TextView
+        android:id="@+id/won2"
+        android:text="원"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:inputType=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/costEditText"
+        app:layout_constraintTop_toBottomOf="@id/won1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="150dp"
+        />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="85dp"
+        android:layout_height="30dp"
+        android:text="날 짜 : "
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/tv_solid_rect"
+        app:layout_constraintTop_toBottomOf="@id/costTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="250dp"
+        />
+
+    <TextView
+        android:id="@+id/dateTextView2"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="40dp"
+        android:text="-"
+        android:textColor="#FF541F"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/tv_stroke_rect"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/costEditText"
+        app:layout_constraintStart_toStartOf="@id/dateTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+
+
+    <ImageButton
+        android:id="@+id/moneySaveButton"
+        android:src="@drawable/ic_baseline_save2_alt_24"
+        android:backgroundTint="@color/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTextView2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        />
+
+
+
+
+
+
+
+
+    <FrameLayout
+        android:id="@+id/mainFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:itemBackground="@color/Gold"
+        app:itemIconTint="@drawable/menu_click_color"
+        app:itemTextColor="@drawable/menu_click_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/navi_menu"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

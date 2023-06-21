@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/CalenderViewCustom"
+        app:mcv_dateTextAppearance="@style/CalenderViewDateCustomText"
+        app:mcv_weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+        app:mcv_selectionMode="range"
+        tools:ignore="MissingConstraints"
+        />
+
+
+    <TextView
+        android:id="@+id/startDateTextView"
+        android:layout_width="85dp"
+        android:layout_height="30dp"
+        android:text="시 작 일 : "
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/tv_solid_rect"
+        app:layout_constraintTop_toBottomOf="@id/calendarView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="250dp"
+         />
+    <TextView
+        android:id="@+id/endDateTextView"
+        android:layout_width="85dp"
+        android:layout_height="30dp"
+        android:text="종 료 일 : "
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/tv_solid_rect"
+        app:layout_constraintTop_toBottomOf="@id/startDateTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="250dp"
+        />
+
+    <TextView
+        android:id="@+id/startDateTextView2"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="40dp"
+        android:text="-"
+        android:textSize="16sp"
+        android:textColor="#009688"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/tv_stroke_rect"
+        app:layout_constraintTop_toBottomOf="@id/calendarView"
+        app:layout_constraintStart_toStartOf="@id/startDateTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/endDateTextView2"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="40dp"
+        android:text="-"
+        android:textColor="#009688"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/tv_stroke_rect"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/startDateTextView"
+        app:layout_constraintStart_toStartOf="@id/endDateTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/startTimeTextView"
+        android:text="시작 시간 : "
+        android:layout_width="85dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/endDateTextView2"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/tv_solid_rect"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="250dp"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/endTimeTextView"
+        android:text="종료 시간 : "
+        android:layout_width="85dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startTimeTextView"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/tv_solid_rect"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="250dp"
+        android:textSize="16sp"
+        />
+
+
+    <TextView
+        android:text="-"
+        android:id="@+id/startTimeTextView2"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="40dp"
+        android:textColor="#F6528A"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/tv_stroke_rect"
+        app:layout_constraintStart_toStartOf="@+id/startTimeTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/endDateTextView2"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:text="-"
+        android:id="@+id/endTimeTextView2"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="40dp"
+        android:textColor="#F6528A"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/tv_stroke_rect"
+        app:layout_constraintStart_toStartOf="@+id/endTimeTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startTimeTextView2"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/todoText"
+        android:text="할 일 : "
+        android:layout_width="85dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/endTimeTextView"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/tv_solid_rect"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="250dp"
+        android:textSize="16sp"
+        />
+
+
+    <EditText
+        android:id="@+id/todoEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/endTimeTextView2"
+        app:layout_constraintStart_toStartOf="@id/todoText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+
+        />
+
+    <ImageButton
+        android:backgroundTint="@color/background"
+        android:id="@+id/scheduleSaveButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_baseline_save_alt_24"
+        app:layout_constraintStart_toStartOf="@+id/todoEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/endTimeButton"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="198dp"
+        />
+
+    <ImageButton
+        android:id="@+id/startTimeButton"
+        android:backgroundTint="@color/background"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_baseline_access_time_24"
+        app:layout_constraintStart_toStartOf="@+id/startTimeTextView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/endDateTextView2"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="190dp"
+
+        />
+
+    <ImageButton
+        android:id="@+id/endTimeButton"
+        android:backgroundTint="@color/background"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_baseline_access_time_24"
+        app:layout_constraintStart_toStartOf="@+id/endTimeTextView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startTimeButton"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="190dp"
+        />
+
+    <FrameLayout
+        android:id="@+id/mainFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:itemBackground="@color/Gold"
+        app:itemIconTint="@drawable/menu_click_color"
+        app:itemTextColor="@drawable/menu_click_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/navi_menu"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

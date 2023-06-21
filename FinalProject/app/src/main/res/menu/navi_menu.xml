@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/calendarFragment"
+        android:title="일정 추가"
+        android:icon="@drawable/ic_baseline_edit_make_calendar_24"/>
+
+    <item
+        android:id="@+id/showCalendarFragment"
+        android:title="일정/가계부 보기"
+        android:icon="@drawable/ic_baseline_calendar_24"/>
+
+    <item
+        android:id="@+id/backFragment"
+        android:title="금전 출납"
+        android:icon="@drawable/ic_baseline_attach_money_24"/>
+
+
+</menu>
